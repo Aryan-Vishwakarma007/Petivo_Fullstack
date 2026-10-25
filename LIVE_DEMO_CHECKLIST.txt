@@ -1,0 +1,46 @@
+PETIVO EXPERIMENTS 6-8 - LIVE DEMO CHECKLIST
+============================================
+
+SETUP
+[ ] Docker Desktop installed and running
+[ ] .env copied from .env.example and local secrets configured
+[ ] No .env or token values included in screenshots or Git
+[ ] `docker compose config` passes
+[ ] `docker compose build` passes
+[ ] `docker compose up -d` starts all services
+[ ] `docker compose ps` shows services healthy
+[ ] http://localhost:8080 opens PETIVO
+
+EXPERIMENT 6 - JWT
+[ ] Register a user and sign in
+[ ] Protected dashboard loads with a valid token
+[ ] Browser Network panel shows Authorization: Bearer header (hide its value)
+[ ] Backend tests pass for invalid credentials and missing/invalid/expired tokens
+[ ] Admin-only route denies a USER and permits configured ADMIN
+
+EXPERIMENT 7 - REACT + SPRING BOOT
+[ ] Service catalogue loads through the backend API
+[ ] Appointment is created and displayed in the React interface
+[ ] Edit, refresh, and verify appointment persistence
+[ ] Delete appointment and verify it is gone
+[ ] Network requests go to /api and return successful backend responses
+
+EXPERIMENT 8 - DOCKER + GITHUB
+[ ] Docker images build locally
+[ ] MySQL service uses persistent mysql_data storage
+[ ] GitHub Actions test, frontend lint/build, and Docker-build jobs pass
+[ ] GHCR contains petivo-final-api and petivo-final-web (after authorized push)
+[ ] Cloud host serves the application through HTTPS (only after cloud setup)
+
+SCREENSHOT ORDER
+1. Experiment 6: terminal showing successful backend test summary.
+2. Experiment 6: browser login and protected page; hide any token/password.
+3. Experiment 7: browser Network panel showing successful GET/POST /api
+   requests and a response body without credentials or Authorization value.
+4. Experiment 7: appointment created, edited, and persisted after refresh.
+5. Experiment 8: `docker compose ps` showing all services healthy.
+6. Experiment 8: GitHub Actions successful workflow run and GHCR package list.
+7. Experiment 8: public HTTPS URL only if a cloud host was actually deployed.
+
+Capture screenshots manually on the user's machine. This workspace does not
+have Docker installed, so no Docker or cloud screenshots/results are claimed.

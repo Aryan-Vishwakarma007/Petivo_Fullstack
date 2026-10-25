@@ -1,0 +1,21 @@
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+**/node_modules/
+**/dist/
+**/target/
+*.log
+.DS_Store
+.idea/
+.vscode/
+/backend/src/main/java/com/petivo/api.zip
+/petivo-frontend/src.zip
+
+# Preserve the legacy nested repository locally; do not stage it as a gitlink.
+/PETIVO FINAL/
+
+backend/run-log.txt
+
+backend/run-log.txt
